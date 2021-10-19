@@ -1,0 +1,58 @@
+amlModuleIdentifier:
+  moduleName: Hello World Output 3
+  moduleVersion: 0.0.0
+  namespace: microsoft.com/azureml/samples1-o
+description: A hello world tutorial to create a module for ml.azure.com.
+implementation:
+  container:
+    amlEnvironment:
+      python:
+        condaDependencies:
+          channels:
+          - defaults
+          dependencies:
+          - python=3.7.6
+          - pip:
+            - azureml-defaults
+            - azureml-designer-core==0.0.31
+          name: project_environment
+    args:
+    - --input-path
+    - inputPath: Input path
+    - --output-path-1
+    - outputPath: Output path 1
+    - --output-path-2
+    - outputPath: Output path 2
+    - --output-path-3
+    - outputPath: Output path 3
+    - --output-path-4
+    - outputPath: Output path 4
+    - --output-path
+    - outputPath: Output path
+    command:
+    - python
+    - hello_world.py
+inputs:
+- description: The directory contains dataframe.
+  name: Input path
+  type: DataFrameDirectory
+metadata:
+  annotations:
+    tags:
+    - DataTransformation
+outputs:
+- description: The directory contains a dataframe.
+  name: Output path
+  type: DataFrameDirectory
+- description: The directory contains dataframe.
+  name: Output path 1
+  type: DataFrameDirectory
+- description: The directory contains dataframe.
+  name: Output path 2
+  type: DataFrameDirectory
+- description: The directory contains dataframe.
+  name: Output path 3
+  type: DataFrameDirectory
+- description: The directory contains dataframe.
+  name: Output path 4
+  type: DataFrameDirectory

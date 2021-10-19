@@ -1,0 +1,55 @@
+#  This is an auto generated module spec yaml file.
+#  For more details, please refer to https://aka.ms/azureml-module-specs
+amlModuleIdentifier:
+  moduleName: Compare
+  moduleVersion: 0.0.1
+metadata:
+  annotations:
+    codegenBy: dsl.module
+inputs:
+- name: Model1
+  type: AnyDirectory
+  argumentName: model1
+  description: The first model to compare with
+- name: Eval result1
+  type: AnyDirectory
+  argumentName: eval_result1
+  description: The evaluation result of first model
+- name: Model2
+  type: AnyDirectory
+  argumentName: model2
+  description: The second model to compare
+- name: Eval result2
+  type: AnyDirectory
+  argumentName: eval_result2
+  description: The evaluation result of second model
+- name: Metrics
+  type: String
+  argumentName: metrics
+  description: The metrics to select better model
+outputs:
+- name: Best model
+  type: AnyDirectory
+  argumentName: best_model
+  description: The better model among the two
+implementation:
+  container:
+    amlEnvironment:
+      python:
+        condaDependenciesFile: conda.yaml
+    command:
+    - python
+    - compare_entry.py
+    args:
+    - --model1
+    - inputPath: Model1
+    - --eval_result1
+    - inputPath: Eval result1
+    - --model2
+    - inputPath: Model2
+    - --eval_result2
+    - inputPath: Eval result2
+    - --metrics
+    - inputValue: Metrics
+    - --best_model
+    - outputPath: Best model
