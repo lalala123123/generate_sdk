@@ -1,5 +1,7 @@
 assets:
-  workspace_component1:
-  - azureml://subscriptions/74eccef0-4b8d-4f83-b5f9-fa100d155b22/resourcegroups/lisal-dev/workspaces/lisal-amlservice/
-  workspace_component2:
-  - azureml://subscriptions/74eccef0-4b8d-4f83-b5f9-fa100d155b22/resourcegroups/lisal-dev/workspaces/lisal-amlservice/
+  workspace_independent_component:
+  - file:../../../../../components/mpi/component.yaml
+  - file:../../../../../components/copy_files/component.yaml
+  - file:../../../../../components/hdi-component/component_spec.yaml
+  - file:../../../../../components/scope_component/toss/component_spec.yaml
+  - file:../../../../../components/sweep_component/sweep.spec.yaml

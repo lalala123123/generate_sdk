@@ -11,6 +11,5 @@ Subpackages
 
 .. toctree::
 
-    generate_sdk.workspace_component1
-    generate_sdk.workspace_component2
+    generate_sdk.workspace_independent_component
 
