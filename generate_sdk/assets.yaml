@@ -1,3 +1,5 @@
 assets:
-  workspace_component111:
+  workspace_component1:
+  - azureml://subscriptions/74eccef0-4b8d-4f83-b5f9-fa100d155b22/resourcegroups/lisal-dev/workspaces/lisal-amlservice/
+  workspace_component2:
   - azureml://subscriptions/74eccef0-4b8d-4f83-b5f9-fa100d155b22/resourcegroups/lisal-dev/workspaces/lisal-amlservice/
