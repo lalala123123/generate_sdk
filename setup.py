@@ -10,11 +10,11 @@ def package_files(directory):
             paths.append(os.path.join(path, filename))
     return paths
 
-extra_files = package_files('generate_test/components')
-extra_files.append('generate_test/assets.yaml')
+extra_files = package_files('generate_sdk/components')
+extra_files.append('generate_sdk/assets.yaml')
 
 setuptools.setup(
-    name='generate_test',
+    name='generate_sdk',
     version='0.0.1',
     author='Example Author',
     author_email='author@example.com',
@@ -25,6 +25,7 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
     ],
+    install_requires=['azure-ml-component'],
     packages=setuptools.find_packages(),
     python_requires='>=3.6',
     include_package_data=True,

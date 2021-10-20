@@ -1,7 +1,7 @@
-generate_test
-=============
+generate_sdk
+============
 
 .. toctree::
    :maxdepth: 4
 
-   generate_test
+   generate_sdk
