@@ -1,1 +1,2 @@
-generate-sdk
+-i https://azuremlsdktestpypi.azureedge.net/CLI-SDK-Runners-Validation/49823304/
+azure-ml-component
