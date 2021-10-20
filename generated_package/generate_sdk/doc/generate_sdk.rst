@@ -11,7 +11,5 @@ Subpackages
 
 .. toctree::
 
-    generate_sdk.feed
-    generate_sdk.local_component
-    generate_sdk.workspace_dependent_component
+    generate_sdk.components
 
