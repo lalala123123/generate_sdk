@@ -25,7 +25,6 @@ setuptools.setup(
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
     ],
-    install_requires=['azure-ml-component'],
     packages=setuptools.find_packages(),
     python_requires='>=3.6',
     include_package_data=True,
