@@ -1,4 +1,4 @@
-generate_sdk1
+generate_test
 =============
 
 .. toctree::
