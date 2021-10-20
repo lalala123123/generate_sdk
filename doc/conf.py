@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# generate_sdk documentation build configuration file.
+# generate_test documentation build configuration file.
 #
 # This file is execfile()d with the current directory set to its
 # containing dir.
@@ -45,7 +45,7 @@ source_suffix = ['.rst', '.md']
 master_doc = 'index'
 
 # General information about the project.
-project = 'generate_sdk'
+project = 'generate_test'
 copyright = '2021, author@example.com'
 author = 'author@example.com'
 
@@ -94,7 +94,7 @@ html_theme = 'sphinx_rtd_theme'
 # -- Options for HTMLHelp output ------------------------------------------
 
 # Output file base name for HTML help builder.
-htmlhelp_basename = 'generate_sdk'
+htmlhelp_basename = 'generate_test'
 
 
 # -- Options for manual page output ---------------------------------------
@@ -102,7 +102,7 @@ htmlhelp_basename = 'generate_sdk'
 # One entry per manual page. List of tuples
 # (source start file, name, description, authors, manual section).
 man_pages = [
-    (master_doc, 'generate_sdk', 'generate_sdk Documentation',
+    (master_doc, 'generate_test', 'generate_test Documentation',
      [author], 1)
 ]
 
@@ -113,8 +113,8 @@ man_pages = [
 # (source start file, target name, title, author,
 #  dir menu entry, description, category)
 texinfo_documents = [
-    (master_doc, 'generate_sdk', 'generate_sdk Documentation',
-     author, 'generate_sdk', 'One line description of project.',
+    (master_doc, 'generate_test', 'generate_test Documentation',
+     author, 'generate_test', 'One line description of project.',
      'Miscellaneous'),
 ]
 
