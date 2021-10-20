@@ -1,0 +1,36 @@
+amlModuleIdentifier:
+  namespace: microsoft.com/aml/samples
+  moduleName: "Score"
+  moduleVersion: 0.0.6
+description: A dummy scoring module
+inputs:
+- name: model_input
+  type: AnyDirectory
+  description: Zipped model file
+- name: test_data
+  type: [AnyFile, AnyDirectory]
+  description: Test data organized in the torchvision format/structure
+outputs:
+- name: score_output
+  type: AnyDirectory
+  description: The scoring result in TSV
+implementation:
+  container:
+    amlEnvironment:
+      python:
+        condaDependencies:
+          name: project_environment
+          channels:
+            - defaults
+          dependencies:
+            - python=3.6.8
+            - pip:
+              - azureml-sdk==0.1.0.*
+              - --index-url https://azuremlsdktestpypi.azureedge.net/dev/aml/office/134157926D8F 
+              - --extra-index-url https://pypi.org/simple
+    command: [python, score.py]
+    args: [
+      --model_input, {inputPath: model_input},
+      --test_data, {inputPath: test_data},
+      --score_output, {outputPath: score_output}
+    ]

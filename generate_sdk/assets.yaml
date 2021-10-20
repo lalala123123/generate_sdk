@@ -1,7 +1,0 @@
-assets:
-  workspace_independent_component:
-  - file:../../../../../components/mpi/component.yaml
-  - file:../../../../../components/copy_files/component.yaml
-  - file:../../../../../components/hdi-component/component_spec.yaml
-  - file:../../../../../components/scope_component/toss/component_spec.yaml
-  - file:../../../../../components/sweep_component/sweep.spec.yaml

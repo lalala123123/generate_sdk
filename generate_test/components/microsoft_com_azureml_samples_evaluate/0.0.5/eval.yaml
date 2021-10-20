@@ -1,0 +1,34 @@
+# Copyright (c) Microsoft Corporation.
+# Licensed under the MIT License.
+
+$schema: http://azureml/sdk-2-0/CommandComponent.json
+name: microsoft.com.azureml.samples.evaluate
+version: 0.0.5
+display_name: Evaluate
+type: CommandComponent
+description: A dummy evaluate module
+tags: {}
+inputs:
+  scoring_result:
+    type: path
+    description: Scoring result file in TSV format
+    optional: false
+outputs:
+  eval_output:
+    type: path
+    description: Evaluation result
+command: >-
+  python eval.py --scoring_result {inputs.scoring_result} --eval_output {outputs.eval_output}
+environment:
+  conda:
+    conda_dependencies:
+      name: project_environment
+      channels:
+      - defaults
+      dependencies:
+      - python=3.6.8
+      - pip=20.0
+      - pip:
+        - azureml-defaults
+        - azureml-dataprep>=1.6
+  os: Linux
